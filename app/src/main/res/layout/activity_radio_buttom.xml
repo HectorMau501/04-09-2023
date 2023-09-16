@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RadioButtom">
+
+    <TextView
+        android:id="@+id/txtTitulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/titulo"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editMetros2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="73dp"
+        android:ems="10"
+        android:hint="@string/cantidad"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo2" />
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="313dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editMetros2">
+
+        <RadioButton
+            android:id="@+id/rbPies"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pies" />
+
+        <RadioButton
+            android:id="@+id/rbPulgadas"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pulgadas" />
+
+        <RadioButton
+            android:id="@+id/rbYardas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yardas" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/ibtnLimpiar2"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="string"
+        android:onClick="onClick2"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnMostrar2"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <ImageButton
+        android:id="@+id/ibtnMostrar2"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="64dp"
+        android:contentDescription="string"
+        android:onClick="onClick2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <ImageButton
+        android:id="@+id/ibtnConvertir2"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="string"
+        android:onClick="onClick2"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnLimpiar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        tools:srcCompat="@android:drawable/ic_menu_save" />
+
+    <TextView
+        android:id="@+id/txtResultado2"
+        android:layout_width="289dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="46dp"
+        android:text="@string/cantidadconvertir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibtnLimpiar2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

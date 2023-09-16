@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SwitchFloatingActionButton">
+
+    <TextView
+        android:id="@+id/txtTitulo5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/titulo"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editMetros5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="73dp"
+        android:ems="10"
+        android:hint="@string/cantidad"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo5" />
+
+    <Switch
+        android:id="@+id/swPie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="56dp"
+        android:switchPadding="30dp"
+        android:text="@string/pies"
+        android:thumb="@drawable/baseline_arrow_circle_right_24"
+        android:thumbTint="@color/design_default_color_primary_dark"
+        android:trackTint="@color/selectOn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editMetros5" />
+
+    <Switch
+        android:id="@+id/swPulgada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/pulgadas"
+        android:thumb="@drawable/baseline_arrow_circle_right_24"
+        android:thumbTint="@color/design_default_color_primary_dark"
+        android:trackTint="@color/selectOn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swPie" />
+
+    <Switch
+        android:id="@+id/swYarda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="33dp"
+        android:switchPadding="15dp"
+        android:text="@string/yardas"
+        android:thumb="@drawable/baseline_arrow_circle_right_24"
+        android:thumbTint="@color/design_default_color_primary_dark"
+        android:trackTint="@color/selectOn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swPulgada" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        app:backgroundTint="@color/design_default_color_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/fbaLimpiar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swYarda"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbaLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="76dp"
+        android:clickable="true"
+        app:backgroundTint="@color/design_default_color_error"
+        app:layout_constraintEnd_toStartOf="@+id/fbaMostrar"
+        app:layout_constraintTop_toBottomOf="@+id/swYarda"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbaMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="44dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swYarda"
+        app:srcCompat="@android:drawable/ic_menu_view" />
+
+    <TextView
+        android:id="@+id/txtResultado5"
+        android:layout_width="289dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="46dp"
+        android:text="@string/cantidadconvertir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fbaLimpiar" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckBox">
+
+    <TextView
+        android:id="@+id/txtTitulo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/titulo"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editMetros3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="73dp"
+        android:ems="10"
+        android:hint="@string/cantidad"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo3" />
+
+    <CheckBox
+        android:id="@+id/cbPie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/pies"
+        app:layout_constraintEnd_toStartOf="@+id/cbPulgada"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editMetros3" />
+
+    <CheckBox
+        android:id="@+id/cbPulgada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/pulgadas"
+        app:layout_constraintEnd_toStartOf="@+id/cbYarda"
+        app:layout_constraintTop_toBottomOf="@+id/editMetros3" />
+
+    <CheckBox
+        android:id="@+id/cbYarda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="52dp"
+        android:text="@string/yardas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editMetros3" />
+
+    <ImageButton
+        android:id="@+id/ibtnLimpiar3"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="string"
+        android:onClick="onClick3"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnMostrar3"
+        app:layout_constraintTop_toBottomOf="@+id/cbPulgada"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <ImageButton
+        android:id="@+id/ibtnMostrar3"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="64dp"
+        android:contentDescription="string"
+        android:onClick="onClick3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPulgada"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <ImageButton
+        android:id="@+id/ibtnConvertir3"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="string"
+        android:onClick="onClick3"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnLimpiar3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPulgada"
+        tools:srcCompat="@android:drawable/ic_menu_save" />
+
+    <TextView
+        android:id="@+id/txtResultado3"
+        android:layout_width="289dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="46dp"
+        android:text="@string/cantidadconvertir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibtnLimpiar3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
